@@ -2,7 +2,6 @@
 
     @section('content')
     <div class="min-h-screen bg-gradient-to-br from-blue-900 to-blue-700">
-        <!-- Hero Section -->
         <div class="container mx-auto px-4 py-24 flex flex-col-reverse md:flex-row items-center gap-12">
             <div class="md:w-1/2 space-y-6 text-white">
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight">
