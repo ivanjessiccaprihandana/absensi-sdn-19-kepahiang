@@ -20,6 +20,7 @@
                     </a>
                 </div>
             </div>
+            <!-- tes -->
             <div class="md:w-1/2 relative">
                 <div class="absolute -top-6 -left-6 w-full h-full bg-yellow-400 rounded-2xl -z-10"></div>
                 <img src="{{ asset('images/logo.png') }}" alt="Siswa SDN 19 Kepahyang" 
