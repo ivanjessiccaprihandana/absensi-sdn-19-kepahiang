@@ -27,7 +27,6 @@
             </div>
         </div>
 
-        <!-- Features Section -->
         <div id="features" class="py-16 bg-white/90 backdrop-blur-sm">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
