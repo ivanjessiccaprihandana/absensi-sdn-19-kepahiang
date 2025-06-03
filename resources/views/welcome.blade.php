@@ -6,7 +6,7 @@
             <div class="md:w-1/2 space-y-6 text-white">
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-200">Presensi Digital</span><br>
-                    SDN 19 Kepahyang
+                    SDN 19 Kepahyangg
                 </h1>
                 <p class="text-xl text-blue-100">Transformasi manajemen kehadiran dengan teknologi modern berbasis web.</p>
                 <div class="flex flex-wrap gap-4 pt-4">
