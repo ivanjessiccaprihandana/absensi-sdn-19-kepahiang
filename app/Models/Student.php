@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-    protected $fillable = ['no_presensi','nama_siswa','mata_pelajaran'];
+    protected $fillable = ['name','class_id','nis'];
 
 
 
@@ -20,5 +20,6 @@ class Student extends Model
     public function attendances() {
         return $this->hasMany(Attendances::class);
     }
+
 
 }

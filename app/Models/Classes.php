@@ -9,6 +9,10 @@ class Classes extends Model
 {
     use HasFactory;
 
+    protected $fillable= [
+        'name',
+    ];
+
 
     // Class.php
     public function students() {

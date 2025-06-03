@@ -4,22 +4,20 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Student;
+use App\Models\Class;
+use App\Models\Classes;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
-use Filament\Forms\Components\Card;
-use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\StudentResource\Pages;
+use App\Filament\Resources\ClassResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\StudentResource\RelationManagers;
+use App\Filament\Resources\ClassResource\RelationManagers;
 
-class StudentResource extends Resource
+class ClassResource extends Resource
 {
-    protected static ?string $model = Student::class;
+    protected static ?string $model = Classes::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -27,14 +25,7 @@ class StudentResource extends Resource
     {
         return $form
             ->schema([
-                Card::make()
-                    ->schema([
-                        TextInput::make('name')->required()->unique(),
-                        Select::make('class_id')
-                            ->relationship('class', 'name'),
-                     
-                    ])
-                    ->columns(2),
+                TextInput::make('name')->required()->unique(),
             ]);
     }
 
@@ -42,15 +33,13 @@ class StudentResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('class.name')->label('kelas'),
+                Tables\Columns\TextColumn::make('name')->searchable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -67,9 +56,9 @@ class StudentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListStudents::route('/'),
-            'create' => Pages\CreateStudent::route('/create'),
-            'edit' => Pages\EditStudent::route('/{record}/edit'),
+            'index' => Pages\ListClasses::route('/'),
+            'create' => Pages\CreateClass::route('/create'),
+            'edit' => Pages\EditClass::route('/{record}/edit'),
         ];
     }    
 }

@@ -20,6 +20,7 @@ class Attendances extends Model
         'meeting_id',
         'student_id',
         'status',
+        'meeting_number'
     ];
 
             // Meeting.php// Attendance.php
@@ -30,6 +31,7 @@ class Attendances extends Model
     public function meeting() {
         return $this->belongsTo(Meetings::class);
     }
+    
 
 
 }

@@ -9,6 +9,12 @@ class Meetings extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'subject_id',
+        'class_id',
+        'meeting_date',
+        'meeting_number'
+    ];
         // Meeting.php
     public function subject() {
         return $this->belongsTo(Subject::class);
@@ -19,7 +25,8 @@ class Meetings extends Model
     }
 
     public function attendances() {
-        return $this->hasMany(Attendances::class);
+        return $this->hasMany(Attendances::class, 'meeting_id'); // ✅ sebutkan foreign key yang BENAR
     }
+    
 
 }

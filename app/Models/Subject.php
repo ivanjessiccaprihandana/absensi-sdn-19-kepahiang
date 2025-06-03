@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     use HasFactory;
+    protected $fillable= [
+        'nama',
+    ];
 
     // Subject.php
     public function meetings() {
