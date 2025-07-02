@@ -22,15 +22,7 @@
                             <p class="text-xs">SDN 19 Kepahyang</p>
                         </div>
                     </div>
-                    <div class="hidden md:flex items-center space-x-6">
-                        <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'font-semibold' : '' }} hover:underline">Dashboard</a>
-                        <a href="{{ route('admin.presensi.index') }}" class="{{ request()->routeIs('admin.presensi.*') ? 'font-semibold' : '' }} hover:underline">Presensi</a>
-                        <a href="{{ route('admin.siswa') }}" class="{{ request()->routeIs('admin.siswa') ? 'font-semibold' : '' }} hover:underline">Data Siswa</a>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="hover:underline">Logout</button>
-                        </form>
-                    </div>
+                 
                     <button class="md:hidden focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
