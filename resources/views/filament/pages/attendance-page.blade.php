@@ -2,10 +2,11 @@
     <div class="space-y-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- ✨ Fancy Header -->
-        <div class="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 rounded-2xl shadow-xl p-8 text-white animate-fade-in">
-            <h1 class="text-4xl font-extrabold tracking-tight">📘 Presensi Siswa SD</h1>
-            <p class="mt-2 text-blue-100 text-lg">Pantau kehadiran siswa dengan mudah dan menyenangkan 🚀</p>
-        </div>
+     <div class="bg-white rounded-2xl shadow-xl p-8 text-gray-900 animate-fade-in">
+    <h1 class="text-4xl font-extrabold tracking-tight">📘 Presensi Siswa SD</h1>
+    <p class="mt-2 text-gray-600 text-lg">Pantau kehadiran siswa dengan mudah dan menyenangkan 🚀</p>
+</div>
+
 
         <!-- 🎨 Filter Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
@@ -52,10 +53,11 @@
         @if ($selectedMeeting && $selectedSubject)
             <form wire:submit.prevent="save" class="animate-fade-in-up">
                 <div class="rounded-2xl shadow-xl overflow-hidden border border-purple-200 bg-white">
-                    <div class="px-6 py-4 border-b bg-gradient-to-r from-purple-600 to-indigo-500 text-white">
-                        <h2 class="text-xl font-bold">📋 Daftar Presensi</h2>
-                        <p class="text-sm text-purple-100">Pertemuan ke-{{ $selectedMeeting }} - {{ $subjects->firstWhere('id', $selectedSubject)->nama }}</p>
-                    </div>
+                   <div class="px-6 py-4 border-b bg-white text-gray-900">
+    <h2 class="text-xl font-bold">📋 Daftar Presensi</h2>
+    <p class="text-sm text-gray-600">Pertemuan ke-{{ $selectedMeeting }} - {{ $subjects->firstWhere('id', $selectedSubject)->nama }}</p>
+</div>
+
 
                     <div class="overflow-x-auto">
                         <table class="min-w-full divide-y divide-purple-200 text-sm">
